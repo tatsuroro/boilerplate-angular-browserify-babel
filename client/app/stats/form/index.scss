@@ -1,0 +1,53 @@
+.stats-form {
+  .option-area {
+    @extend .form-horizontal, .well, .well-sm;
+
+    margin: 0;
+    padding-top: $padding-large-vertical;
+    padding-bottom: 0;
+  }
+  .option-form-group {
+    @extend .form-group;
+    padding-bottom: $padding-base-vertical;
+
+    & > label {
+      @extend .col-sm-3, .col-md-2, .control-label;
+      padding-top: $padding-small-vertical!important;
+      font-size: $font-size-small;
+    }
+
+    .form-item {
+      @extend .col-sm-9, .col-md-10;
+    }
+  }
+
+  .option-btns {
+    .btn-group {
+      & > .btn {
+        @extend .btn-sm;
+      }
+    }
+  }
+
+  .option-spend-margin {
+    .btn-mode {
+      @extend .btn, .btn-xs, .btn-default;
+    }
+  }
+  .spend-margin-text {
+    display: block;
+    padding: 4px 0 8px 0;
+  }
+  .spend-margin-input {
+  }
+
+  .btn-area {
+    @extend .clearfix;
+
+    margin-top: 0;
+
+    .content-row {
+      @extend .col-sm-offset-3, .col-md-offset-2;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+﻿// col
+
+@mixin col($col: null, $row: null) {
+  @if $col == hidden {
+    display: none;
+  }
+  @else if $col == not-hidden {
+    display: inline-block;
+  }
+  @else {
+    width: 100% / $row * $col;
+  }
+}

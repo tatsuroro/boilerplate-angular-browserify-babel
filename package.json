@@ -1,0 +1,116 @@
+{
+  "name": "app",
+  "main": "server/app.js",
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "dependencies": {
+    "amqp": "^0.2.4",
+    "babel": "^5.6.14",
+    "bluebird": "^2.9.30",
+    "body-parser": "~1.13.1",
+    "composable-middleware": "^0.3.0",
+    "compression": "~1.5.0",
+    "connect-mongo": "^0.8.1",
+    "connect-timeout": "^1.6.2",
+    "cookie-parser": "~1.3.5",
+    "decimal.js": "^4.0.2",
+    "ejs": "~2.3.2",
+    "errorhandler": "~1.4.0",
+    "express": "~4.13.0",
+    "express-jwt": "^3.0.1",
+    "express-session": "~1.11.3",
+    "fb": "^0.7.0",
+    "jquery": "^2.1.4",
+    "jsonwebtoken": "~5.0.2",
+    "lodash": "~3.*",
+    "method-override": "~2.3.3",
+    "moment": "^2.10.3",
+    "mongoose": "~4.0.*",
+    "morgan": "~1.6.0",
+    "node-fetch": "^1.3.0",
+    "serve-favicon": "~2.3.0",
+    "string": "^3.3.0"
+  },
+  "devDependencies": {
+    "angular": "~1.4.*",
+    "angular-animate": "~1.4.*",
+    "angular-bootstrap-npm": "~0.13.*",
+    "angular-cookies": "~1.4.*",
+    "angular-mocks": "~1.4.*",
+    "angular-multi-select": "~5.3.6",
+    "angular-sanitize": "~1.4.*",
+    "angular-ui-router": "~0.2.*",
+    "angularjs-toaster": "^0.4.15",
+    "babelify": "^6.1.2",
+    "bootstrap-sass": "^3.3.5",
+    "bootswatch": "^3.3.5",
+    "browserify": "^10.2.4",
+    "browserify-ngannotate": "^1.0.1",
+    "browserify-shim": "^3.8.9",
+    "connect": "^3.4.0",
+    "espower-babel": "^3.2.0",
+    "font-awesome": "^4.3.0",
+    "gulp": "^3.9.0",
+    "gulp-angular-templatecache": "^1.7.0",
+    "gulp-autoprefixer": "2.3.1",
+    "gulp-csso": "^1.0.0",
+    "gulp-header": "^1.2.2",
+    "gulp-if": "^1.2.5",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-inject": "^1.3.1",
+    "gulp-injector": "0.0.2",
+    "gulp-jshint": "^1.11.2",
+    "gulp-live-server": "0.0.21",
+    "gulp-livereload": "^3.8.0",
+    "gulp-minify-html": "^1.0.3",
+    "gulp-natural-sort": "^0.1.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.3",
+    "gulp-rimraf": "^0.1.1",
+    "gulp-sass": "~2.0.*",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.6",
+    "gulp-watch": "^4.2.4",
+    "jshint-stylish": "~2.0.1",
+    "loaders.css": "^0.1.1",
+    "ng-csv": "^0.3.3",
+    "ng-infinite-scroll": "~1.2.*",
+    "node-sass": "~3.2.*",
+    "restangular": "^1.5.1",
+    "run-sequence": "^1.1.1",
+    "ui-select": "~0.11.2",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.2.3",
+    "yargs": "^3.14.0"
+  },
+  "browser": {
+    "lodash": "./node_modules/lodash/index.js",
+    "jquery": "./node_modules/jquery/dist/jquery.js"
+  },
+  "browserify-shim": {
+    "jquery": "$",
+    "lodash": "_",
+    "restangular": {
+      "depends": [
+        "lodash"
+      ]
+    }
+  },
+  "browserify": {
+    "transform": [
+      "babelify",
+      "browserify-shim",
+      "browserify-ngannotate"
+    ]
+  },
+  "babel": {
+    "ignore": [
+      "node_modules/**/*.js"
+    ]
+  },
+  "scripts": {
+  },
+  "private": true
+}

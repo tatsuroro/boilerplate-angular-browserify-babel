@@ -1,0 +1,15 @@
+.front {
+  .lead {
+    padding: ($padding-large-vertical * 3) $padding-base-horizontal;
+    font-size: $font-size-base;
+  }
+
+  .content-footer {
+    padding: 0 $padding-base-horizontal;
+    vertical-align: middle;
+    i {
+      padding: 0 $padding-xs-horizontal;
+    }
+  }
+}
+

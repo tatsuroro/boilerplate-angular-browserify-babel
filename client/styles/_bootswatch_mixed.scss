@@ -1,0 +1,58 @@
+
+// Navs =======================================================================
+
+.nav-tabs {
+  > li > a,
+  > li > a:focus {
+    margin-right: 0;
+    background-color: transparent;
+    border: none;
+    color: $gray-light;
+    box-shadow: inset 0 -1px 0 $gray-light;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: transparent;
+      box-shadow: inset 0 -2px 0 $brand-info;
+      color: $brand-info;
+    }
+  }
+
+  & > li.active > a,
+  & > li.active > a:focus {
+    border: none;
+    box-shadow: inset 0 -2px 0 $brand-info;
+    color: $brand-info;
+
+    &:hover {
+      border: none;
+      color: $brand-info;
+    }
+  }
+
+  & > li.disabled > a {
+    box-shadow: inset 0 -1px 0 $gray-light;
+  }
+
+  &.nav-justified {
+
+    & > li > a,
+    & > li > a:hover,
+    & > li > a:focus,
+    & > .active > a,
+    & > .active > a:hover,
+    & > .active > a:focus {
+      border: none;
+    }
+  }
+
+  .dropdown-menu {
+    margin-top: 0;
+  }
+}
+
+.dropdown-menu {
+  margin-top: 0;
+  border: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}

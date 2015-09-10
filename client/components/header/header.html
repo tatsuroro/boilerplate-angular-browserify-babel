@@ -1,0 +1,9 @@
+<div class="header">
+  <h1 ng-if="header.label" ng-bind="::header.labelName"></h1>
+
+  <h1 ng-if="!header.label && header.title" ng-bind="::header.title"></h1>
+
+  <span ng-if="header.tabs">
+    <tabs items="header.tabs"></tabs>
+  </span>
+</div>

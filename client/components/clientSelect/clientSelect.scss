@@ -1,0 +1,42 @@
+$ui-select-height: 32px;
+
+$color-client-select-bg: #444E4E;
+
+.client-select {
+  @extend .col-xs-8, .col-sm-10, .col-md-9, .col-lg-7;
+  padding: 4px;
+
+  .caption {
+    float: left;
+    width: 60px;
+    padding-top: 8px;
+    display: inline-block;
+    text-align: right;
+    font-size: 11px;
+    letter-spacing: .1rem;
+  }
+
+  .select-wrap {
+    display: block;
+    margin-left: 70px;
+  }
+  .ui-select-toggle {
+    padding: 6px 0px 6px 8px;
+    max-height: $ui-select-height;
+    border-radius: 0;
+    border-width: 0;
+    font-size: $font-size-small;
+    // override BG
+    &.btn-default {
+      background-color: $color-client-select-bg;
+    }
+  }
+
+  .ui-select-search {
+    height: $ui-select-height;
+  }
+  .ui-select-bootstrap > .ui-select-choices {
+    max-height: 250px;
+    font-size: $font-size-small;
+  }
+}

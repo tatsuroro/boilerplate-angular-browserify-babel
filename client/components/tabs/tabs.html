@@ -1,0 +1,8 @@
+<div class="tabs">
+  <tabset class="tabs-menu">
+    <tab ng-repeat="item in tabs.items"
+      ng-click="tabs.go(item)"
+      heading="{{::item.name}}"
+      active="item.active"></tab>
+  </tabset>
+</div>

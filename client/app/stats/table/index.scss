@@ -1,0 +1,19 @@
+.stats-table {
+  .option-area {
+    @extend .form-horizontal, .well, .well-sm;
+
+    padding-top: $padding-large-vertical;
+    padding-bottom: 0;
+  }
+  .option-form-group {
+    @extend .form-group;
+    padding-bottom: $padding-base-vertical;
+    & > label {
+      @extend .col-sm-3, .control-label;
+      padding-top: $padding-small-vertical!important;
+    }
+    .form-item {
+      @extend .col-sm-9;
+    }
+  }
+}

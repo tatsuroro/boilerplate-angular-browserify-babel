@@ -1,0 +1,95 @@
+<div class="paginated-table" ng-show="paginatedTable.models">
+
+  <!-- table head options Area -->
+  <!-- / -->
+
+  <table class="table">
+    <thead table-sort>
+      <tr>
+        <th class="{{key}}" ng-repeat="(key, name) in paginatedTable.constant.columnNames"
+          ng-class="{center: key === 'url'}">
+
+          <div class="checkbox" ng-if="key === 'checkbox_col'">
+            <label>
+              <input type="checkbox" class=""
+                ng-model="paginatedTable.isCheckedAll"
+                ng-click="paginatedTable.methods.toggle()">
+            </label>
+          </div>
+
+          <button class="sort {{key}}" ng-class="activeClass({{key}})"
+            ng-if="key !== 'checkbox_col'">
+            {{name}}
+          </button>
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr class="table-row"
+        ng-repeat="row in paginatedTable.models |
+          offset: paginatedTable.pagination.offset |
+          limitTo: paginatedTable.pagination.limit">
+        <td class="{{key}}"
+          ng-repeat="(key, name) in paginatedTable.constant.columnNames"
+          ng-class="{center: key === 'url'}">
+
+          <!-- checkbox option -->
+          <div class="checkbox" ng-if="key === 'checkbox_col'">
+            <label>
+              <input type="checkbox"
+               ng-model="row.isChecked">
+            </label>
+          </div>
+
+          <!-- for Creative Preview -->
+          <img ng-src="{{row.image_url}}" ng-if="key === 'image_url'">
+
+          <!-- for creative call to action -->
+          <div ng-if="key === 'call_to_action'">
+            <span class="label label-default">type</span>
+            <br>
+            {{row[key].type}}
+            <br>
+            <div ng-show="!_.isEmpty(row[key].value)">
+              <span class="label label-default">value</span>
+              <br>
+              {{row[key].value.link_title}}
+            </div>
+          </div>
+
+          <span class="label label-default" ng-if="key === 'status'">{{row[key]}}</span>
+
+          <!-- Download link -->
+          <a href="{{row[key]}}" target="_blank" ng-if="key === 'url' && row[key]">
+              <i class="icon ion-ios-download-outline"></i>&nbsp;DL
+          </a>
+
+          <!-- else normal table cell -->
+          <span ng-if="
+            key !== 'url' &&
+            key !== 'image_url' &&
+            key !== 'call_to_action' &&
+            key !== 'checkbox_col' &&
+            key !== 'status'
+          ">
+              {{row[key]}}
+            </span>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- table bottom options Area -->
+  <table-pagination class="clearfix"
+    constant="paginatedTable.constant"
+    models="paginatedTable.pagination"></table-pagination>
+
+  <small class="form-inline pull-right">
+    {{paginatedTable.pagination.currentPage}} / {{paginatedTable.pagination.numPages}}
+  </small>
+  <!-- / -->
+
+
+</div>

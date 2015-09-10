@@ -1,0 +1,45 @@
+
+.form-inline {
+  display: inline-block;
+  width: auto;
+  margin-right: $padding-base-horizontal;
+}
+
+.inline-block {
+  display: inline-block;
+  vertical-align: top;
+  width: auto;
+  margin-right: $padding-base-horizontal;
+}
+
+// ngAnimate fade transition
+.transition {
+  opacity: 1;
+}
+.transition.ng-enter,
+.transition.ng-hide-remove {
+  transition: all 0.2s ease 0s;
+}
+.transition.ng-leave {
+}
+.transition.ng-enter,
+.transition.ng-hide-remove {
+  opacity: 0;
+}
+.transition.ng-enter-active,
+.transition.ng-hide-remove-active {
+  opacity: 1;
+}
+.transition.ng-leave,
+.transition.ng-hide-add {
+  opacity: 1;
+}
+.transition.ng-leave-active,
+.transition.ng-hide-add-active {
+  opacity: 0;
+}
+
+
+.nowrap {
+  white-space: nowrap;
+}

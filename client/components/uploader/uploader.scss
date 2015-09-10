@@ -1,0 +1,14 @@
+.uploader {
+  .input-area {
+    padding-bottom: $padding-base-vertical;
+  }
+
+  .btn-select {
+    @extend .btn, .btn-sm, .btn-default;
+  }
+  .btn-submit {
+    @extend .btn, .btn-sm, .btn-info;
+  }
+
+
+}

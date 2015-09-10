@@ -1,0 +1,32 @@
+<div class="stats-retrieve">
+  <div class="option-area">
+
+    <div class="option-form-group">
+      <label>広告アカウント</label>
+
+      <account-select
+        is-single="true"
+        class="form-item"></account-select>
+    </div>
+
+    <div class="option-form-group">
+      <label>期間</label>
+
+      <div class="form-item">
+        <termdate models="statsRetrieve.termdate"></termdate>
+      </div>
+    </div>
+  </div>
+
+  <div class="btn-area">
+    <div class="content-row">
+      <button type="button" class="btn btn-sm btn-primary"
+        ng-disabled="statsRetrieve.isDisabledRetrieve()"
+        ng-click="statsRetrieve.retrieve()">
+        レポートを再取得する
+      </button>
+
+    </div>
+  </div>
+
+</div>

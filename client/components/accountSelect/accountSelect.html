@@ -1,0 +1,39 @@
+<div class="account-select">
+  <div class=""
+    ng-if="!accountSelect.isSingle">
+    <ui-select multiple="true"
+      ng-model="accountSelect.clientService.accounts.selected"
+      close-on-select="false"
+      title="広告アカウントを選択 (IDスペース区切りで複数絞込)">
+        <ui-select-match placeholder="広告アカウントを選択 (IDスペース区切りで複数絞込)">
+          <span class="id" ng-bind="$item.id"></span> |&nbsp;
+          <span class="name">{{$item.name}}</span>
+        </ui-select-match>
+        <ui-select-choices repeat="account in accountSelect.clientService.accounts.selection[accountSelect.clientService.media.selected]
+          | filter:$select.search"
+        >
+          <div ng-bind-html="account.name"></div>
+          <small ng-bind="account.id"></small>
+        </ui-select-choices>
+    </ui-select>
+  </div>
+
+  <!-- single Select -->
+  <div class=""
+    ng-if="accountSelect.isSingle">
+    <div ui-select
+      ng-model="accountSelect.clientService.accounts.selected[0]">
+      <ui-select-match placeholder="広告アカウントを選択してください.."
+        allow-clear="false">
+        {{$select.selected.name}}
+      </ui-select-match>
+      <ui-select-choices repeat="account in accountSelect.clientService.accounts.selection[accountSelect.clientService.media.selected]
+        | filter:$select.search"
+      >
+          <div ng-bind-html="account.name | highlight: $select.search"></div>
+          <small ng-bind="account.id"></small>
+      </ui-select-choices>
+    </div>
+  </div>
+  <!-- / -->
+</div>

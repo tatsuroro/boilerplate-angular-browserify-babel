@@ -1,0 +1,67 @@
+/**
+ * Override Bootswatch Variables
+ */
+
+/**
+ * ColorPattern
+ */
+$color-red-accent  : #e3352a !default;
+$color-googleplus  : #dd4b39 !default;
+$color-twitter     : #55acee !default;
+$color-facebook    : #3b5998 !default;
+$color-black-dark  : #05080b !default;
+$color-gray-dark   : #374651 !default;
+$color-green-dark  : #222f18 !default;
+$color-white-silver: #e6f0f6 !default;
+$color-gold        : #bfba82 !default;
+$color-white       : #fefefc !default;
+
+
+/**
+ * variables
+ */
+$sidebar-width: 200px;
+$navbar-height-app: 40px;
+$header-height: 50px;
+$content-subheader-height: 54px;
+
+
+/**
+ * overrides
+ */
+
+// material var copy
+$gray-darker:            lighten(#000, 13.5%) !default; // #222
+$gray-dark:              #7b8a8b !default;   // #333
+$gray:                   #95a5a6 !default; // #555
+$gray-light:             #b4bcc2 !default;   // #999
+$gray-lighter:           #ecf0f1 !default; // #eee
+$body-bg:               #fff !default;
+
+//== Type
+//
+//##
+
+
+//== Navs
+//
+//##
+
+//=== Shared nav styles
+$nav-link-padding:                          10px 15px !default;
+$nav-link-hover-bg:                         $gray-lighter !default;
+
+$nav-disabled-link-color:                   $gray-light !default;
+$nav-disabled-link-hover-color:             $gray-light !default;
+
+//== Tabs
+$nav-tabs-border-color:                     transparent !default;
+
+$nav-tabs-link-hover-border-color:          $gray-lighter !default;
+
+$nav-tabs-active-link-hover-bg:             transparent !default;
+$nav-tabs-active-link-hover-color:          $gray !default;
+$nav-tabs-active-link-hover-border-color:   transparent !default;
+
+$nav-tabs-justified-link-border-color:            $nav-tabs-border-color !default;
+$nav-tabs-justified-active-link-border-color:     $body-bg !default;

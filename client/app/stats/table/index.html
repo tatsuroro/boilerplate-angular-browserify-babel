@@ -1,0 +1,36 @@
+<div class="stats-table">
+
+  <button type="button" class="btn btn-xs btn-link" ui-sref="^">
+    オプション選択へ戾る
+  </button>
+
+  <div class="option-area">
+    <div class="option-form-group">
+      <label class="">アドアカウント</label>
+
+      <div class="form-item">
+        {{report.models.adAccount.name}}
+      </div>
+    </div>
+
+    <div class="option-form-group target-component">
+      <label>サマリ対象コンポーネント</label>
+
+      <div class="form-item">
+        {{report.models.component.name}}
+      </div>
+    </div>
+
+    <div class="option-form-group">
+      <label>期間</label>
+
+      <div class="form-item">
+        {{methods.getTermLabel()}}
+      </div>
+    </div>
+  </div>
+
+  <div paginated-table="reportTable.constant.paginatedTable"
+    ng-model="reportTable.models.list"></div>
+
+</div>

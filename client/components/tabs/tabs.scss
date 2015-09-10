@@ -1,0 +1,13 @@
+.tabs {
+  display: inline-block;
+  .tabs-menu {
+    display: inline-block;
+    vertical-align: top;
+    .nav-tabs {
+      & > li > a {
+        margin-top: 6px;
+        padding: 8px 15px 15px 15px;
+      }
+    }
+  }
+}

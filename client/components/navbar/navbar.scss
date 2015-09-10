@@ -1,0 +1,45 @@
+.ixd-navbar {
+  @extend .clearfix;
+  margin: 0;
+  min-height: $navbar-height-app;
+  color: $body-bg;
+  background-color: $color-black-dark;
+
+  .media-select {
+    @extend .col-xs-4, .col-sm-2, .col-md-3, .col-lg-5;
+    padding: 0;
+
+    .media-link {
+      display: inline-block;
+      a {
+        display: inline-block;
+        padding: 6px 17px 7px 17px;
+        color: $body-bg;
+        &.active {
+          background: $body-bg;
+        }
+      }
+      i {
+        display: block;
+        min-width: 17px;
+        text-align: center;
+        font-size: $font-size-large;
+      }
+      &.facebook {
+        > a:hover,
+        > a.active > i {
+          color: $color-facebook;
+        }
+      }
+      &.twitter {
+        > a:hover,
+        > a.active > i {
+          color: $color-twitter;
+        }
+      }
+    }
+
+  }
+
+
+}

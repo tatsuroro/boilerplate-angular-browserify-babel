@@ -1,0 +1,14 @@
+<div class="ixd-navbar">
+  <div class="media-select">
+    <span class="media-link {{::media.id}}" ng-repeat="media in navbar.media.selection">
+      <a ng-class="{active: navbar.media.selected === media.id}"
+        ng-click="navbar.activate(media.id)">
+        <i class="{{::media.icon}}"></i>
+      </a>
+    </span>
+  </div>
+
+  <!-- Client Selection -->
+  <client-select></client-select>
+  <!-- / -->
+</div>

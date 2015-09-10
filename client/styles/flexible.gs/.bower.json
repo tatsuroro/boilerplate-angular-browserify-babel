@@ -1,0 +1,15 @@
+{
+  "name": "flexible.gs",
+  "homepage": "https://github.com/dnomak/flexible.gs",
+  "version": "4.0.0",
+  "_release": "4.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "4.0.0",
+    "commit": "9d8483baafda1d2b700a3459a06487eb843eaae6"
+  },
+  "_source": "git://github.com/dnomak/flexible.gs.git",
+  "_target": "~4.0.0",
+  "_originalSource": "flexible.gs",
+  "_direct": true
+}

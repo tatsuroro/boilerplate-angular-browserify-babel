@@ -1,0 +1,58 @@
+$icon-font-path: '/assets/icons/bootstrap/' !default;
+$fa-font-path: '/assets/icons/font-awesome/' !default;
+$ionicons-font-path: '/assets/icons/ionicons/fonts/' !default;
+
+@import '../styles/shadow';
+
+// app Variables (override bootstrap & bootswatch)
+@import '../styles/variables';
+
+// bootstrap & bootswatch
+@import '../styles/vendor/variables';
+@import "bootstrap-sass/assets/stylesheets/bootstrap";
+@import 'bootswatch/flatly/bootswatch';
+
+// other libraries
+@import '../styles/flexible.gs/dynamic/sass/scss/flexiblegs/flexiblegs';
+@import 'angularjs-toaster/toaster';
+
+// Icons
+@import 'font-awesome/scss/font-awesome';
+@import '../assets/icons/ionicons/scss/ionicons';
+
+// animation.css-scss
+@import '../styles/animate.css-scss/properties';
+@import '../styles/animate.css-scss/_fading-entrances/_fadeInDown.scss';
+@import '../styles/animate.css-scss/_fading-exits/_fadeOut.scss';
+
+// override & mix bootswatch styles
+@import '../styles/bootswatch_mixed';
+
+// override bootstrap default class
+@import '../styles/override';
+
+// util class
+@import '../styles/util';
+
+// app wide base styles
+@import '../styles/base';
+
+
+
+// Component styles are injected through gulp-inject
+// injector
+@import 'accountSelect/accountSelect.scss';
+@import 'clientSelect/clientSelect.scss';
+@import 'front/front.scss';
+@import 'header/header.scss';
+@import 'navbar/navbar.scss';
+@import 'paginatedTable/paginatedTable.scss';
+@import 'sidebar/sidebar.scss';
+@import 'stats/form/index.scss';
+@import 'stats/retrieve/history/index.scss';
+@import 'stats/retrieve/index.scss';
+@import 'stats/stats.scss';
+@import 'stats/table/index.scss';
+@import 'tabs/tabs.scss';
+@import 'uploader/uploader.scss';
+// endinjector

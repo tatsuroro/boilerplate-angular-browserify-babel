@@ -1,0 +1,75 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  width: $sidebar-width;
+
+  .brand-logo {
+    min-height: $navbar-height-app;
+    color: $body-bg;
+    background-color: $color-black-dark;
+    border-bottom: 1px solid $text-color;
+    .logo {
+      display: inline-block;
+      vertical-align: top;
+      padding: 8px 0 0 60px;
+      img {
+        height: 26px;
+      }
+    }
+  }
+
+  .menus {
+    padding: 0;
+  }
+
+  .menu {
+    &:hover {
+      background: $color-green-dark;
+    }
+    a {
+      cursor: pointer;
+      &:hover, &:focus, &:visited {
+        text-decoration: none;
+      }
+    }
+    .menu-content {
+      display: block;
+      padding: $padding-small-vertical $padding-small-horizontal;
+      color: $gray-light;
+      & > .icon {
+        margin-right: $padding-small-horizontal;
+      }
+      .parent-sign {
+        position: absolute;
+        right: $padding-xs-horizontal;
+      }
+      &.abstract {
+        color: $gray-dark;
+      }
+    }
+
+    &.active {
+      .menu-content {
+        color: white;
+      }
+      &.head {
+        background: $link-color;
+      }
+    }
+    &.child {
+      .menu-content {
+        padding: ($padding-small-vertical / 2) 8px ($padding-small-vertical / 2) 34px;
+        font-size: $font-size-small + 1px;
+      }
+    }
+
+    // mod icon pos
+    &.editor {
+      & > span {
+        & > .icon {
+          margin-left: 2px;
+        }
+      }
+    }
+  }
+}

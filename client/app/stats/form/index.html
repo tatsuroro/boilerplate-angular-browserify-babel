@@ -1,0 +1,124 @@
+<div class="stats-form">
+  <div class="option-area">
+
+    <div class="option-form-group">
+      <label>広告アカウント</label>
+
+      <account-select
+        is-single="true"
+        class="form-item"></account-select>
+    </div>
+
+    <div class="option-form-group option-btns">
+      <label>サマリ対象</label>
+
+      <!-- facebook -->
+      <div class="form-item"
+        ng-show="statsForm.clientService.media.selected === 'facebook'">
+        <div class="btn-group btn-group-justified">
+          <label class="btn btn-default"
+            ng-model="statsForm.component.facebook"
+            ng-repeat="component in ::statsForm.constant.targetComponents.facebook"
+            btn-radio="component.id">
+            {{::component.name}}
+          </label>
+        </div>
+      </div>
+      <!--  -->
+
+      <!-- twitter -->
+      <div class="form-item"
+        ng-show="statsForm.clientService.media.selected === 'twitter'">
+        <div class="btn-group btn-group-justified">
+          <label class="btn btn-default"
+            ng-model="statsForm.component.twitter"
+            ng-repeat="component in ::statsForm.constant.targetComponents.twitter"
+            btn-radio="component.id">
+            {{::component.name}}
+          </label>
+        </div>
+      </div>
+      <!-- / -->
+
+    </div>
+
+
+    <div class="option-form-group option-btns">
+      <label>フォーマット</label>
+
+      <div class="form-item">
+        <div class="btn-group">
+          <label class="btn btn-default" ng-model="statsForm.format"
+            ng-repeat="format in ::statsForm.constant.formats"
+            btn-radio="format.id">
+            {{::format.name}}
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="option-form-group">
+      <label>期間</label>
+
+      <div class="form-item">
+        <termdate models="statsForm.termdate"></termdate>
+      </div>
+    </div>
+
+
+    <div class="option-form-group option-spend-margin"
+      ng-show="statsForm.clientService.media.selected === 'facebook'">
+      <label>媒体費</label>
+
+      <div class="form-item">
+        <div class="spend-margin-text"
+          ng-show="!statsForm.isModifySpendMargin">
+          <span>{{::statsForm.constant.spendMargin.def}} %</span>
+        </div>
+
+        <div class="spend-margin-input col-xs-4 col-md-3 col-lg-2 input-group input-group-sm"
+          ng-show="statsForm.isModifySpendMargin">
+          <input type="number" class="form-control"
+            ng-model="statsForm.spendMargin"
+            placeholder="-100 ~ 100"
+            min="-100"
+            max="100"
+            required="true"
+            ng-required="true"
+            >
+          <span class="input-group-addon">%</span>
+        </div>
+
+        <div class="checkbox clearfix">
+          <button type="button" class="btn-mode"
+            ng-model="statsForm.isModifySpendMargin"
+            ng-click="statsForm.isModifySpendMargin = !statsForm.isModifySpendMargin">
+            <span ng-show="!statsForm.isModifySpendMargin">
+              媒体費を変更して出力
+            </span>
+            <span ng-show="statsForm.isModifySpendMargin">
+              デフォルトの媒体費を使用
+            </span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <!-- / -->
+
+
+  <div class="btn-area">
+    <div class="content-row">
+      <button type="button" class="btn btn-sm btn-primary"
+        ng-disabled="statsForm.isDisabledSubmit()"
+        ng-click="statsForm.prepare()">
+        レポートを出力する
+        &nbsp;
+        <span class="label label-default">CSV</span>
+      </button>
+
+    </div>
+  </div>
+</div>

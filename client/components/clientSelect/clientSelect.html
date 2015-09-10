@@ -1,0 +1,19 @@
+<div class="client-select">
+
+  <div class="caption">CLIENT</div>
+
+  <div class="select-wrap">
+    <div ui-select
+      ng-model="clientSelect.clientService.client"
+      ng-change="clientSelect.getMediaAccounts()">
+      <ui-select-match placeholder="クライアントを選択.."
+        allow-clear="false">
+        {{$select.selected.name}}
+      </ui-select-match>
+      <ui-select-choices repeat="client in clientSelect.clients | filter:$select.search | limitTo: 100">
+          <div ng-bind-html="client.name | highlight: $select.search"></div>
+      </ui-select-choices>
+    </div>
+  </div>
+
+</div>

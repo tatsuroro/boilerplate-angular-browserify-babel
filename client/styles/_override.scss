@@ -1,0 +1,138 @@
+
+// alternative loaders
+@import 'loaders.css/src/animations/ball-scale-ripple-multiple';
+
+
+.form-control {
+  @extend .input-sm;
+}
+
+.well, .well-sm {
+  border-radius: 0;
+}
+
+// ui-bootstrap collapse trigger
+.toggle-collapse {
+    cursor: pointer;
+}
+
+// ui-select bootstrap
+.ui-select-toggle {
+  padding: 5px 20px 5px 14px;
+
+  .btn.btn-link {
+    color: white;
+  }
+}
+.ui-select-match-text {
+  width: 90%;
+  overflow: hidden;
+  padding-right: $padding-base-horizontal;
+}
+
+// modal window close icon (X)
+.close-icon {
+    color: #aaa;
+}
+
+// angular-toaster notification
+#toast-container {
+  &.toast-top-full-width > div {
+    border-radius: 0;
+    box-shadow: 0 0 6px $color-gray-dark;
+    padding: 12px 15px 12px 50px;
+    width: 100%;
+    opacity: 1;
+  }
+}
+:not(.no-enter)#toast-container > div.ng-enter {
+  transition: none;
+  @include fadeInDown(.3s); // animate.css-scss
+}
+:not(.no-enter)#toast-container > div.ng-leave {
+  transition: none;
+  @include fadeOut(.3s); // animate.css-scss
+}
+
+.toast-success {
+  background-color: $brand-success;
+}
+
+.toast-error {
+  background-color: $brand-danger;
+}
+
+.toast-info, .toast-wait {
+  background-color: $brand-info;
+}
+
+.toast-warning {
+  background-color: $brand-warning;
+}
+
+
+.modal-open {
+    // modal background box-shadow
+    .modal {
+        background-color: rgba(0, 0, 0, .4);
+    }
+
+    .modal-content {
+      color: $text-color;
+    }
+}
+
+// LoadingBar Style Override
+
+/* Make clicks pass-through */
+#loading-bar,
+#loading-bar-spinner {
+  pointer-events: none;
+  transition: 350ms linear all;
+}
+#loading-bar.ng-enter,
+#loading-bar.ng-leave.ng-leave-active,
+#loading-bar-spinner.ng-enter,
+#loading-bar-spinner.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+#loading-bar.ng-enter.ng-enter-active,
+#loading-bar.ng-leave,
+#loading-bar-spinner.ng-enter.ng-enter-active,
+#loading-bar-spinner.ng-leave {
+  opacity: 1;
+}
+#loading-bar .bar {
+  background: $color-green-dark;
+  height: 4px;
+}
+#loading-bar .peg {
+  box-shadow: 0 0 10px #2c3e50, 0 0 5px #2c3e50;
+}
+#loading-bar-spinner {
+  border-radius: $padding-base-vertical;
+  display: block;
+  z-index: 10002;
+  position: fixed;
+  left: 50%;
+  top : 50%;
+  margin-left: -30px;
+  margin-top : -30px;
+
+  width : 60px;
+  height: 60px;
+
+  .spinner-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    @extend .ball-scale-ripple-multiple;
+
+    & > div {
+      border-color: $color-gold;
+      // opacity: .6;
+    }
+  }
+}
+

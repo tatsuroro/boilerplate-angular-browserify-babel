@@ -1,0 +1,34 @@
+<div class="sidebar">
+  <div class="brand-logo">
+    <a href="/" class="logo">
+      <!-- <img src="assets/images/logo_w.png" alt=""> -->
+      brand logo
+    </a>
+  </div>
+
+  <!-- menus -->
+  <ul class="list-unstyled menus">
+    <li ng-repeat="menu in sidebar.menus"
+      class="menu {{::menu.id}}"
+      ng-class="{child: menu.parent, head: !menu.parent, active: sidebar.isActive(menu)}">
+
+      <span ng-if="::(menu.abstract)" class="menu-content abstract">
+        <i ng-if="::(menu.icon)" class="icon {{::menu.icon}}"></i>
+        {{::menu.name}}
+        <i class="icon ion-ios-arrow-down parent-sign"></i>
+      </span>
+
+      <a ng-if="::(!menu.abstract)" ng-click="::sidebar.go(menu)">
+        <span class="menu-content">
+          <i ng-if="::(menu.icon)" class="icon {{::menu.icon}}" ></i>
+          {{::menu.name}}
+        </span>
+      </a>
+
+    </li>
+  </ul>
+  <!-- / -->
+
+
+  <twitter-auth></twitter-auth>
+</div>

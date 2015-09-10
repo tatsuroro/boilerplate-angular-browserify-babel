@@ -1,5 +1,6 @@
 # Boilerplate-angular-browserify-babel
 
+scaffolding template for angular-es6-bi-tool
 
 ## Main Libraries
 * Browserify
